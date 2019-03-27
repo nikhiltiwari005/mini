@@ -1,0 +1,6 @@
+/error.log
+/log
+/vendor
+/composer.lock
+/public/error_log
+/config.php
