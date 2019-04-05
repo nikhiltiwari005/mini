@@ -4,3 +4,4 @@
 /composer.lock
 /public/error_log
 /config.php
+/storage

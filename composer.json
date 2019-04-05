@@ -6,8 +6,5 @@
 		"psr-4" : {
 			"App\\": "."
 		}
-	},
-	"require": {
-		"sunra/php-simple-html-dom-parser": "^1.5"
 	}
 }
