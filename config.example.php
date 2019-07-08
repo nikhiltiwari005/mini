@@ -1,7 +1,10 @@
 <?php
 
 return [
-    'database' => [
+    'debug'     => [
+        'errors' => false
+    ],
+    'database'  => [
         'name' => 'test',
         'username' => 'testUser',
         'password' => 'testPass',

@@ -7,4 +7,5 @@ use App\Model\Model;
 class User extends Model
 {
     // protected $tableName = 'users';
+    
 }

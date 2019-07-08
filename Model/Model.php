@@ -11,10 +11,16 @@ class Model
 
     public function __construct()
     {
-        $app = Config::con();
         $this->tableName = $this->setTable();
         
+        $app = Config::con();
         $this->pdo = Connection::make($app['database']);
+    }
+
+    public function raw ($query = '') {
+        $app = Config::con();
+        $pdo = Connection::make($app['database']);
+        return $pdo->exec($query);
     }
 
     public function insert() {
@@ -30,8 +36,11 @@ class Model
         return $statement->fetchAll(\PDO::FETCH_CLASS);
     }
 
-    public function select() {
-        
+    public function select($query = '') {
+        $app = Config::con();
+        $pdo = Connection::make($app['database']);
+        $stm = $pdo->query($query);
+        return $stm->fetchAll(\PDO::FETCH_CLASS);
     }
 
     public function update() {
